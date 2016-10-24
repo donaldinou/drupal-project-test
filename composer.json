@@ -1,7 +1,7 @@
 {
     "name": "drupal-features/website-standard-edition-test",
     "description": "Acreat project for the e-commerce patisserieledaniel website",
-    "version": "1.0.0-alpha",
+    "version": "1.0.0",
     "type": "drupal-website",
     "keywords": ["Drupal", "acreat", "patisserie", "ledaniel"],
     "homepage": "http://www.patisserieledaniel.com",
