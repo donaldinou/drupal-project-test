@@ -1,0 +1,82 @@
+{
+    "name": "drupal/project-test",
+    "description": "Acreat project for the e-commerce patisserieledaniel website",
+    "version": "1.0.0-alpha",
+    "type": "drupal-website",
+    "keywords": ["Drupal", "acreat", "patisserie", "ledaniel"],
+    "homepage": "http://www.patisserieledaniel.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrien Loyant",
+            "email": "loyant@acreat.com",
+            "homepage": "http://www.acreat.com",
+            "role": "Developper"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/7"
+        },
+        {
+            "type": "vcs",
+            "url":  "http://gitlab.acreat/composer/drupal-installer.git"
+        }
+
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "composer/installers": "dev-master",
+        "composer/drupal-installer": "dev-master",
+        "drupal/commerce_feeds": "~1.4.0",
+        "drupal/commerce_pickup": "~1.0-beta5",
+        "drupal/commerce_reset": "~1.4",
+        "drupal/commerce_stock_reserve": "~1.3.0",
+        "drupal/commerce_fieldgroup_panes": "^1.1",
+        "drupal/commerce_rules_extra": "^2.1",
+        "drupal/commerce_default_tax_rate": "^1.3",
+        "drupal/ckeditor_link": "^2.4",
+        "drupal/views_data_export": "3.0-beta9",
+        "drupal/views_block_area": "^1.2",
+        "drupal/adminimal_theme": "~1.24.0",
+        "drupal/adminimal_admin_menu": "~1.7.0",
+        "drupal/addressfield_phone": "~1.3.0",
+        "drupal/jquery_update": "~2.7.0",
+        "drupal/better_exposed_filters": "~3.2",
+        "drupal/entity_reference_multiple": "~2.0-alpha4",
+        "drupal/menu_position": "^1.2",
+        "drupal/office_hours": "^1.4",
+        "drupal/taxonomy_formatter": "^1.4",
+        "drupal/logouttab": "^1.1",
+        "drupal/feeds_tamper": "^1.1",
+        "drupal/mass_pwreset": "^1.0",
+        "donaldinou/drupal-theme-alpha-test": "dev-master"
+    },
+    "conflict": {
+        "drupal/drupal": "8.*"
+    },
+    "support": {
+        "email": "support@acreat.com"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "secure-http": false
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "echo 'done'"
+        ]
+    },
+    "extra": {
+        "drupal-config": "parameters.yml",
+        "installer-paths": {
+            "libraries/contrib/{$name}/": ["type:drupal-library"],
+            "modules/contrib/{$name}/": ["type:drupal-module"],
+            "profiles/contrib/{$name}/": ["type:drupal-profile"],
+            "themes/contrib/{$name}/": ["type:drupal-theme"]
+        }
+    }
+}
+
