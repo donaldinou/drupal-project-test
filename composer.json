@@ -1,5 +1,5 @@
 {
-    "name": "drupal/website-standard-edition-test",
+    "name": "drupal-features/website-standard-edition-test",
     "description": "Acreat project for the e-commerce patisserieledaniel website",
     "version": "1.0.0-alpha",
     "type": "drupal-website",
