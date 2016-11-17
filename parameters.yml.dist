@@ -1,0 +1,247 @@
+drupal:
+    core: 8.x
+    root: /var/www/html/drupal/drupal8
+    site:
+        domain: mmywebsite.com
+        name: My Website
+        mail: admin@example.com
+        google_analytics_account: UA-XXXXXX
+    theme:
+        name: *drupal.site.name
+        base-theme:
+            name: "drupal-theme/acreat_abyssin"
+            version: "8.x-1.x-dev as 8.x-dev"
+        variables:
+            $primary-color: blue
+    sync-directories: !join ["../sync/", *drupal.site.domain, "/"]
+    database:
+        driver: pdo_mysql
+        database: database
+        username: root
+        password: password
+        host: localhost
+        port: 3306
+        prefix: ~
+        charset: utf8mb4
+        collation: utf8mb4_general_ci
+    contact:
+        name: My Contact Name
+        email: *drupal.site.mail
+        address: Adresse fictive
+        postal_code: 35000
+        city: Rennes
+        latitude: 40
+        longitude: -1
+        phone: 0234567890
+        mobile: "+33634567890"
+        fax: 0324567890
+        facebook_url: ""
+        twitter_url: ""
+        google_plus_url: ""
+        linked_in_url: ""
+    commands:
+        - "drupal:generate:theme":
+            name: *drupal.theme.name
+            core: *drupal.core
+            base-theme: *drupal.theme.base-theme.name
+            root: *drupal.root
+            domain: *drupal.site.domain
+            composer: ~
+            sass:
+                style:
+                    import: !join [ "styles/scss/",  "style.scss" ]
+                    import: "_variables"
+                    "@mixin sample":
+                        font-size: $primary-color
+                    $screen-sm-max: 920
+                    .test:
+                        padding: auto
+                    .class:
+                        padding-top: 5px
+                        .inherit-class:
+                            margin-top: 10px
+                            "& > div::before":
+                                content: " "
+                                padding: "0px"
+                                margin: "0px"
+                                "@include sample": ~
+                                background: "#fff"
+                                "@media (max-width: $screen-sm-max)":
+                                    .class:
+                                        background: "red"
+                _variables: *drupal.theme.variables
+            bower: ~
+            npm: ~
+            grunt: ~
+        - "drupal:generate:file":
+            source: "resources/files/banner.jpg"
+            destination: "files/banner.jpg"
+            override: true
+        - "drupal:generate:file":
+            source: "resources/files/favicon.ico"
+            destination: "files/favicon.ico"
+            override: true
+        - "drupal:generate:file":
+            source: "resources/files/logo.png"
+            destination: "files/logo.png"
+            override: true
+        - "drupal:generate:file":
+            source: "resources/files/maps-marker.png"
+            destination: "files/maps-marker.png"
+            override: true
+        - "drupal:generate:file":
+            source: "resources/files/no-photo.png"
+            destination: "files/default_images/no-photo.png"
+            override: true
+    form:
+        contact:
+            name:
+                type: textfield
+                title: Dénomination sociale
+                default_value: *drupal.contact.name
+                required: true
+            email:
+                type: textfield
+                title: Email
+                default_value: *drupal.contact.email
+                required: true
+            address:
+                type: textarea
+                title: Adresse
+                default_value: *drupal.contact.address
+                required: true
+            postal_code:
+                type: textfield
+                title: Code postal
+                default_value: *drupal.contact.postal_code
+                required: true
+            city:
+                type: textfield
+                title: Ville
+                default_value: *drupal.contact.city
+                required: true
+            phone:
+                type: textfield
+                title: Téléphone
+                default_value: *drupal.contact.phone
+                required: false
+            phone:
+                type: textfield
+                title: Mobile
+                default_value: *drupal.contact.mobile
+                required: false
+            fax:
+                type: textfield
+                title: Fax
+                default_value: *drupal.contact.fax
+                required: false
+            latitude:
+                type: textfield
+                title: Latitude
+                default_value: *drupal.contact.latitude
+                required: false
+            longitude:
+                type: textfield
+                title: Longitude
+                default_value: *drupal.contact.longitude
+                required: false
+            facebook_url:
+                type: textfield
+                title: URL facebook
+                default_value: *drupal.contact.facebook_url
+                required: false
+            twitter_url:
+                type: textfield
+                title: URL twitter_url
+                default_value: *drupal.contact.twitter_url
+                required: false
+            google_plus_url:
+                type: textfield
+                title: URL Google plus
+                default_value: *drupal.contact.google_plus_url
+                required: false
+            linked_in_url:
+                type: textfield
+                title: URL LinkedIn
+                default_value: *drupal.contact.linked_in_url
+                required: false
+
+drush:
+    commands:
+        - site-install:
+            profile: site_installer
+            args:
+                "config_installer_sync_configure_form.sync-directories": *drupal.sync-directories
+            options:
+                db:
+                    driver: *drupal.database.driver
+                    database: *drupal.database.database
+                    username: *drupal.database.username
+                    password: *drupal.database.password
+                    host: *drupal.database.host
+                    port: *drupal.database.port
+                    prefix: *drupal.database.prefix
+                    charset: *drupal.database.charset
+                    collation: *drupal.database.collation
+                account-name: admin
+                account-pass: admin
+                account-mail: admin@example.com
+                locale: fr
+                clean-url: true
+                site-name: *drupal.site.mail
+                site-mail: *drupal.site.mail
+                sites-subdir: *drupal.site.domain
+        - pm-disable:
+            list: ["quickedit", "contact", "contextual", "comment", "color", "help", "rdf", "search", "tour", "dashboard", "help", "overlay"]
+        - pm-uninstall:
+            list: quickedit
+        - pm-uninstall:
+            list: contact contextual
+        - pm-uninstall:
+            list: ["comment", "color", "help", "rdf", "search", "tour", "dashboard", "help", "overlay"]
+        - pm-enable:
+            list: [ *drupal.theme.name, "acreat_helper" ]
+        - variable-set:
+            name: theme_default
+            value: *drupal.theme.name
+        - variable-set: # config-set
+            name: admin_theme # system.theme default|admin
+            value: seven
+        - variable-set:
+            name: system.file.temporary
+            value: /tmp
+            args: ~
+            options: ~
+        - variable-set:
+            name: file_temporary_path
+            value: /tmp
+            args: ~
+            options: ~
+        - variable-set:
+            name: google_analytics.settings.account
+            value: *drupal.site.google_analytics_account
+            args: ~
+            options: ~
+        - variable-set:
+            name: acreat_factory.client
+            value: *drupal.form.contact
+            args: ~
+            options:
+                format: auto
+        - "import:content":
+            args: ~
+            options: ~
+            custom: [ "install", "update" ]
+        - updatedb:
+            args: ~
+            options: ~
+        - cache-clear:
+            type: all
+        - cache-rebuild:
+            args: ~
+            options: ~
+        - registry-rebuild:
+            args: ~
+            options:
+                fire-bazooka: true
+            custom: [ "install", "update" ]
