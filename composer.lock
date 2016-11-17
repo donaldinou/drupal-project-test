@@ -1032,84 +1032,6 @@
             "time": "2016-11-17 09:56:00"
         },
         {
-            "name": "drupal-theme/acreat_abyssin",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "http://gitlab.acreat/acreat/drupal-theme-abyssin.git",
-                "reference": "eecce590ddae6465d71e9a0a61ae3ceec51a781f"
-            },
-            "require": {
-                "drupal/bootstrap": "~3.0",
-                "php": ">=5.5.9"
-            },
-            "conflict": {
-                "drupal/drupal": "<8.0 >9.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "8.x-1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Drupal\\acreat_abyssin\\": "src"
-                },
-                "exclude-from-classmap": [
-                    "/src/Tests/"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Régis Hautière",
-                    "email": "hautiere@acreat.com",
-                    "homepage": "http://www.acreat.com",
-                    "role": "Owner"
-                },
-                {
-                    "name": "Pierre Brunet",
-                    "email": "brunet@acreat.com",
-                    "homepage": "http://www.acreat.com",
-                    "role": "Developper"
-                },
-                {
-                    "name": "Adrien Chretien",
-                    "email": "chretien@acreat.com",
-                    "homepage": "http://www.acreat.com",
-                    "role": "Developper"
-                },
-                {
-                    "name": "Franck Lintaff",
-                    "email": "lintanff@acreat.com",
-                    "homepage": "http://www.acreat.com",
-                    "role": "Developper"
-                },
-                {
-                    "name": "Adrien Loyant",
-                    "email": "loyant@acreat.com",
-                    "homepage": "http://www.acreat.com",
-                    "role": "Developper"
-                }
-            ],
-            "description": "Abyssin Theme",
-            "homepage": "http://www.acreat.com",
-            "keywords": [
-                "Drupal",
-                "abyssin",
-                "acreat",
-                "bootstrap",
-                "theme"
-            ],
-            "support": {
-                "email": "support@drupal.org"
-            },
-            "time": "2016-11-16 17:18:24"
-        },
-        {
             "name": "drupal/admin_toolbar",
             "version": "1.17.0",
             "source": {
@@ -5172,12 +5094,6 @@
             "alias_normalized": "8.9999999.9999999.9999999-dev",
             "version": "dev-8.x-1.x",
             "package": "drupal-features/acreat_news"
-        },
-        {
-            "alias": "8.x-dev",
-            "alias_normalized": "8.9999999.9999999.9999999-dev",
-            "version": "dev-8.x-1.x",
-            "package": "drupal-theme/acreat_abyssin"
         }
     ],
     "minimum-stability": "dev",
@@ -5197,8 +5113,7 @@
         "drupal/yamlform": 10,
         "drupal-features/acreat_adminimal_admin_toolbar": 20,
         "drupal-features/acreat_factory": 20,
-        "drupal-features/acreat_news": 20,
-        "drupal-theme/acreat_abyssin": 20
+        "drupal-features/acreat_news": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
