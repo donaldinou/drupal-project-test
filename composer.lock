@@ -2908,12 +2908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ducks-project/drupal-info.git",
-                "reference": "0d223cdd7fbdf07ea37d470c274cbd46fcdad10c"
+                "reference": "c724269d54cdc691d3cfa074c13317bb11dbd69e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ducks-project/drupal-info/zipball/0d223cdd7fbdf07ea37d470c274cbd46fcdad10c",
-                "reference": "0d223cdd7fbdf07ea37d470c274cbd46fcdad10c",
+                "url": "https://api.github.com/repos/ducks-project/drupal-info/zipball/c724269d54cdc691d3cfa074c13317bb11dbd69e",
+                "reference": "c724269d54cdc691d3cfa074c13317bb11dbd69e",
                 "shasum": ""
             },
             "require": {
