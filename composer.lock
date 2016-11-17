@@ -96,7 +96,7 @@
             "source": {
                 "type": "git",
                 "url": "http://gitlab.acreat/composer/drupal-installer.git",
-                "reference": "0c535562524074c7c0bc137004129d9006ee4e9c"
+                "reference": "5564dcec31481b59045e72a725a77efb3cfca024"
             },
             "require": {
                 "behat/transliterator": "~1.1",
