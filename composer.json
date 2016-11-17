@@ -1,12 +1,18 @@
 {
     "name": "drupal-features/website-standard-edition-test",
-    "description": "Acreat project for the e-commerce patisserieledaniel website",
-    "version": "1.0.3",
+    "description": "Drupal Acreat Website",
+    "version": "1.0.0",
     "type": "drupal-website",
-    "keywords": ["Drupal", "acreat", "patisserie", "ledaniel"],
-    "homepage": "http://www.patisserieledaniel.com",
+    "keywords": ["Drupal", "acreat", "website"],
+    "homepage": "http://www.acreat.com",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Régis Hautière",
+            "email": "hautiere@acreat.com",
+            "homepage": "http://www.acreat.com",
+            "role": "Owner"
+        },
         {
             "name": "Adrien Loyant",
             "email": "loyant@acreat.com",
@@ -17,44 +23,71 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.drupal.org/7"
+            "url": "https://packages.drupal.org/8"
         },
         {
             "type": "vcs",
             "url":  "http://gitlab.acreat/composer/drupal-installer.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "http://gitlab.acreat/acreat/drupal-acreat-adminimal-admin-toolbar.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "http://gitlab.acreat/acreat/drupal-acreat-factory.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "http://gitlab.acreat/acreat/drupal-acreat-helper.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "http://gitlab.acreat/acreat/drupal-acreat-news.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "http://gitlab.acreat/acreat/drupal-theme-abyssin.git"
         }
 
     ],
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.5.9",
         "composer/installers": "dev-master",
         "composer/drupal-installer": "dev-master",
-        "drupal/commerce_feeds": "~1.4.0",
-        "drupal/commerce_pickup": "~1.0-beta5",
-        "drupal/commerce_reset": "~1.4",
-        "drupal/commerce_stock_reserve": "~1.3.0",
-        "drupal/commerce_fieldgroup_panes": "^1.1",
-        "drupal/commerce_rules_extra": "^2.1",
-        "drupal/commerce_default_tax_rate": "^1.3",
-        "drupal/ckeditor_link": "^2.4",
-        "drupal/views_data_export": "3.0-beta9",
-        "drupal/views_block_area": "^1.2",
-        "drupal/adminimal_theme": "~1.24.0",
-        "drupal/adminimal_admin_menu": "~1.7.0",
-        "drupal/addressfield_phone": "~1.3.0",
-        "drupal/jquery_update": "~2.7.0",
-        "drupal/better_exposed_filters": "~3.2",
-        "drupal/entity_reference_multiple": "~2.0-alpha4",
-        "drupal/menu_position": "^1.2",
-        "drupal/office_hours": "^1.4",
-        "drupal/taxonomy_formatter": "^1.4",
-        "drupal/logouttab": "^1.1",
-        "drupal/feeds_tamper": "^1.1",
-        "drupal/mass_pwreset": "^1.0",
-        "donaldinou/drupal-theme-alpha-test": "dev-master"
+        "drupal/admin_toolbar": "~1.3",
+        "drupal/config_devel": "~1.0-rc1",
+        "drupal/config_update": "~1.2",
+        "drupal/ctools": "~3.0-alpha27",
+        "drupal/default_content": "^1.0-alpha3",
+        "drupal/devel": "~1.0-alpha1",
+        "drupal/entity": "~1.0-alpha3",
+        "drupal/entity_browser": "~1.0-beta1",
+        "drupal/entity_reference_revisions": "~1.0",
+        "drupal/features": "~3.0",
+        "drupal/google_analytics": "~2.1",
+        "drupal/inline_entity_form": "~1.0-beta1",
+        "drupal/link_attributes": "~1.0-alpha3",
+        "drupal/media_entity": "~1.5",
+        "drupal/media_entity_browser": "~1.x-dev",
+        "drupal/media_entity_image": "~1.2",
+        "drupal/menu_breadcrumb": "~1.0-beta3",
+        "drupal/metatag": "~1.0-beta11",
+        "drupal/paragraphs": "~1.0",
+        "drupal/pathauto": "~1.0-beta1",
+        "drupal/search_api": "~1.0-beta3",
+        "drupal/simple_sitemap": "~2.7",
+        "drupal/token": "~1.0-beta2",
+        "drupal/twig_extensions": "~1.0",
+        "drupal/yamlform": "~1.0-beta23",
+        "drupal-features/acreat_adminimal_admin_toolbar": "dev-master",
+        "drupal-features/acreat_factory": "dev-master",
+        "drupal-features/acreat_helper": "~8.1.1",
+        "drupal-features/acreat_news": "dev-master",
+        "drupal-theme/acreat_adminimal_admin_toolbar": "dev-master"
     },
     "conflict": {
-        "drupal/drupal": "8.*"
+        "drupal/drupal": "<8.0 >9.0"
     },
     "support": {
         "email": "support@acreat.com"
@@ -71,6 +104,9 @@
     },
     "extra": {
         "drupal-config": "parameters.yml",
+        "branch-alias": {
+            "dev-master": "8.x-1.x"
+        },
         "installer-paths": {
             "libraries/contrib/{$name}/": ["type:drupal-library"],
             "modules/contrib/{$name}/": ["type:drupal-module"],
