@@ -724,7 +724,7 @@
             "source": {
                 "type": "git",
                 "url": "http://gitlab.acreat/acreat/drupal-acreat-adminimal-admin-toolbar.git",
-                "reference": "fc17aae2b48efe26976d0c092270286489544a13"
+                "reference": "89ef1b6a8c36180cbb2281c1715b2d6ba424460e"
             },
             "require": {
                 "drupal-features/acreat_helper": "~8.1.1",
@@ -803,7 +803,7 @@
             "source": {
                 "type": "git",
                 "url": "http://gitlab.acreat/acreat/drupal-acreat-factory.git",
-                "reference": "49141636b3ff63c0eca57ae81658974e03bac90c"
+                "reference": "74b7fc0d1f1d82a896dc215f01ee8006d1975388"
             },
             "require": {
                 "php": ">=5.5.9"
@@ -960,7 +960,7 @@
             "source": {
                 "type": "git",
                 "url": "http://gitlab.acreat/acreat/drupal-acreat-news.git",
-                "reference": "2dd9806401aae683b6ccf4c484aef8a65eddaa2a"
+                "reference": "57a310ff9193fdf2cd842a7be41b3f314d0c61e6"
             },
             "require": {
                 "drupal-features/acreat_helper": "~8.1.1",
