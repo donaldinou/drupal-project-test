@@ -96,13 +96,13 @@
             "source": {
                 "type": "git",
                 "url": "http://gitlab.acreat/composer/drupal-installer.git",
-                "reference": "dd8781aef97e7ee01db350dcf3b2f5ee5742f811"
+                "reference": "0c535562524074c7c0bc137004129d9006ee4e9c"
             },
             "require": {
                 "behat/transliterator": "~1.1",
                 "composer-plugin-api": "~1.0",
                 "composer/installers": "~1.0",
-                "ducks-project/drupal-info": "~1.2",
+                "ducks-project/drupal-info": "dev-master",
                 "ducks-project/spl-types": "~1.0",
                 "php": ">=5.4",
                 "symfony/yaml": "~2.8"
@@ -2904,16 +2904,16 @@
         },
         {
             "name": "ducks-project/drupal-info",
-            "version": "1.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ducks-project/drupal-info.git",
-                "reference": "0b5911cfd42f4c8548ae5b941f1a44062cc95f95"
+                "reference": "0d223cdd7fbdf07ea37d470c274cbd46fcdad10c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ducks-project/drupal-info/zipball/0b5911cfd42f4c8548ae5b941f1a44062cc95f95",
-                "reference": "0b5911cfd42f4c8548ae5b941f1a44062cc95f95",
+                "url": "https://api.github.com/repos/ducks-project/drupal-info/zipball/0d223cdd7fbdf07ea37d470c274cbd46fcdad10c",
+                "reference": "0d223cdd7fbdf07ea37d470c274cbd46fcdad10c",
                 "shasum": ""
             },
             "require": {
