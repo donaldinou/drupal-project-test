@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "951e625fcf3593e2e63caef28a2f7f83",
-    "content-hash": "d4ed8834733b664007f61b061f12b1fa",
+    "hash": "25ec26c724189c94ae144f0b20078e32",
+    "content-hash": "d6f5f755a040d1d2ac917eadb4140304",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -49,6 +49,107 @@
                 "stack"
             ],
             "time": "2016-08-01 12:05:04"
+        },
+        {
+            "name": "behat/transliterator",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Behat/Transliterator.git",
+                "reference": "868e05be3a9f25ba6424c2dd4849567f50715003"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/868e05be3a9f25ba6424c2dd4849567f50715003",
+                "reference": "868e05be3a9f25ba6424c2dd4849567f50715003",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Behat\\Transliterator": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Artistic-1.0"
+            ],
+            "description": "String transliterator",
+            "keywords": [
+                "i18n",
+                "slug",
+                "transliterator"
+            ],
+            "time": "2015-09-28 16:26:35"
+        },
+        {
+            "name": "composer/drupal-installer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "http://gitlab.acreat/composer/drupal-installer.git",
+                "reference": "54ce63a13779ebca1d2fb949ba48a7cbb2b25efc"
+            },
+            "require": {
+                "behat/transliterator": "~1.1",
+                "composer-plugin-api": "~1.0",
+                "composer/installers": "~1.0",
+                "ducks-project/drupal-info": "~1.1",
+                "ducks-project/spl-types": "~1.0",
+                "php": ">=5.4",
+                "symfony/yaml": "~2.8"
+            },
+            "conflict": {
+                "drupal/drupal": "6.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Drupal\\Plugin\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Drupal\\": "src/Composer/Drupal/",
+                    "Composer\\Drush\\": "src/Composer/Drush/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Régis Hautière",
+                    "email": "hautiere@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Owner"
+                },
+                {
+                    "name": "Adrien Loyant",
+                    "email": "loyant@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                }
+            ],
+            "description": "Composer plugin in order to add extra features when installing a drupal website",
+            "homepage": "http://www.acreat.com",
+            "keywords": [
+                "Drupal",
+                "acreat",
+                "composer",
+                "plugin",
+                "tools"
+            ],
+            "support": {
+                "email": "support@acreat.com"
+            },
+            "time": "2016-11-17 15:16:57"
         },
         {
             "name": "composer/installers",
@@ -1275,6 +1376,183 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/config_update"
             }
+        },
+        {
+            "name": "drupal/core",
+            "version": "8.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-composer/drupal-core.git",
+                "reference": "63b3346647a7e43bcde3947a3aea02eabdf8fa56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/63b3346647a7e43bcde3947a3aea02eabdf8fa56",
+                "reference": "63b3346647a7e43bcde3947a3aea02eabdf8fa56",
+                "shasum": ""
+            },
+            "require": {
+                "asm89/stack-cors": "~1.0",
+                "composer/semver": "~1.0",
+                "doctrine/annotations": "1.2.*",
+                "doctrine/common": "2.5.*",
+                "easyrdf/easyrdf": "0.9.*",
+                "egulias/email-validator": "1.2.*",
+                "guzzlehttp/guzzle": "^6.2.1",
+                "masterminds/html5": "~2.1",
+                "paragonie/random_compat": "~1.0",
+                "php": ">=5.5.9",
+                "stack/builder": "1.0.*",
+                "symfony-cmf/routing": "~1.4",
+                "symfony/class-loader": "~2.8",
+                "symfony/console": "~2.8",
+                "symfony/dependency-injection": "~2.8",
+                "symfony/event-dispatcher": "~2.8",
+                "symfony/http-foundation": "~2.8",
+                "symfony/http-kernel": "~2.8",
+                "symfony/polyfill-iconv": "~1.0",
+                "symfony/process": "~2.8",
+                "symfony/psr-http-message-bridge": "v0.2",
+                "symfony/routing": "~2.8",
+                "symfony/serializer": "~2.8",
+                "symfony/translation": "~2.8",
+                "symfony/validator": "~2.8",
+                "symfony/yaml": "~2.8",
+                "twig/twig": "^1.23.1",
+                "zendframework/zend-diactoros": "~1.1",
+                "zendframework/zend-feed": "~2.4"
+            },
+            "replace": {
+                "drupal/action": "self.version",
+                "drupal/aggregator": "self.version",
+                "drupal/automated_cron": "self.version",
+                "drupal/ban": "self.version",
+                "drupal/bartik": "self.version",
+                "drupal/basic_auth": "self.version",
+                "drupal/big_pipe": "self.version",
+                "drupal/block": "self.version",
+                "drupal/block_content": "self.version",
+                "drupal/block_place": "self.version",
+                "drupal/book": "self.version",
+                "drupal/breakpoint": "self.version",
+                "drupal/ckeditor": "self.version",
+                "drupal/classy": "self.version",
+                "drupal/color": "self.version",
+                "drupal/comment": "self.version",
+                "drupal/config": "self.version",
+                "drupal/config_translation": "self.version",
+                "drupal/contact": "self.version",
+                "drupal/content_moderation": "self.version",
+                "drupal/content_translation": "self.version",
+                "drupal/contextual": "self.version",
+                "drupal/core-annotation": "self.version",
+                "drupal/core-assertion": "self.version",
+                "drupal/core-bridge": "self.version",
+                "drupal/core-datetime": "self.version",
+                "drupal/core-dependency-injection": "self.version",
+                "drupal/core-diff": "self.version",
+                "drupal/core-discovery": "self.version",
+                "drupal/core-event-dispatcher": "self.version",
+                "drupal/core-file-cache": "self.version",
+                "drupal/core-filesystem": "self.version",
+                "drupal/core-gettext": "self.version",
+                "drupal/core-graph": "self.version",
+                "drupal/core-http-foundation": "self.version",
+                "drupal/core-php-storage": "self.version",
+                "drupal/core-plugin": "self.version",
+                "drupal/core-proxy-builder": "self.version",
+                "drupal/core-render": "self.version",
+                "drupal/core-serialization": "self.version",
+                "drupal/core-transliteration": "self.version",
+                "drupal/core-utility": "self.version",
+                "drupal/core-uuid": "self.version",
+                "drupal/datetime": "self.version",
+                "drupal/datetime_range": "self.version",
+                "drupal/dblog": "self.version",
+                "drupal/dynamic_page_cache": "self.version",
+                "drupal/editor": "self.version",
+                "drupal/entity_reference": "self.version",
+                "drupal/field": "self.version",
+                "drupal/field_ui": "self.version",
+                "drupal/file": "self.version",
+                "drupal/filter": "self.version",
+                "drupal/forum": "self.version",
+                "drupal/hal": "self.version",
+                "drupal/help": "self.version",
+                "drupal/history": "self.version",
+                "drupal/image": "self.version",
+                "drupal/inline_form_errors": "self.version",
+                "drupal/language": "self.version",
+                "drupal/link": "self.version",
+                "drupal/locale": "self.version",
+                "drupal/menu_link_content": "self.version",
+                "drupal/menu_ui": "self.version",
+                "drupal/migrate": "self.version",
+                "drupal/migrate_drupal": "self.version",
+                "drupal/migrate_drupal_ui": "self.version",
+                "drupal/minimal": "self.version",
+                "drupal/node": "self.version",
+                "drupal/options": "self.version",
+                "drupal/outside_in": "self.version",
+                "drupal/page_cache": "self.version",
+                "drupal/path": "self.version",
+                "drupal/quickedit": "self.version",
+                "drupal/rdf": "self.version",
+                "drupal/responsive_image": "self.version",
+                "drupal/rest": "self.version",
+                "drupal/search": "self.version",
+                "drupal/serialization": "self.version",
+                "drupal/seven": "self.version",
+                "drupal/shortcut": "self.version",
+                "drupal/simpletest": "self.version",
+                "drupal/standard": "self.version",
+                "drupal/stark": "self.version",
+                "drupal/statistics": "self.version",
+                "drupal/syslog": "self.version",
+                "drupal/system": "self.version",
+                "drupal/taxonomy": "self.version",
+                "drupal/telephone": "self.version",
+                "drupal/text": "self.version",
+                "drupal/toolbar": "self.version",
+                "drupal/tour": "self.version",
+                "drupal/tracker": "self.version",
+                "drupal/update": "self.version",
+                "drupal/user": "self.version",
+                "drupal/views": "self.version",
+                "drupal/views_ui": "self.version"
+            },
+            "require-dev": {
+                "behat/mink": "~1.7",
+                "behat/mink-goutte-driver": "~1.2",
+                "jcalderonzumba/gastonjs": "~1.0.2",
+                "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+                "mikey179/vfsstream": "~1.2",
+                "phpunit/phpunit": "~4.8",
+                "symfony/css-selector": "~2.8"
+            },
+            "type": "drupal-core",
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\Core\\": "lib/Drupal/Core",
+                    "Drupal\\Component\\": "lib/Drupal/Component",
+                    "Drupal\\Driver\\": "../drivers/lib/Drupal/Driver"
+                },
+                "classmap": [
+                    "lib/Drupal.php",
+                    "lib/Drupal/Component/Utility/Timer.php",
+                    "lib/Drupal/Component/Utility/Unicode.php",
+                    "lib/Drupal/Core/Database/Database.php",
+                    "lib/Drupal/Core/DrupalKernel.php",
+                    "lib/Drupal/Core/DrupalKernelInterface.php",
+                    "lib/Drupal/Core/Site/Settings.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+            "time": "2016-11-16 18:45:36"
         },
         {
             "name": "drupal/ctools",
@@ -2623,6 +2901,105 @@
                 "source": "http://cgit.drupalcode.org/yamlform",
                 "issues": "https://drupal.org/project/issues/yamlform"
             }
+        },
+        {
+            "name": "ducks-project/drupal-info",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ducks-project/drupal-info.git",
+                "reference": "76942e5e3eb72df4f04b8cbe4aadee0ae7325908"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ducks-project/drupal-info/zipball/76942e5e3eb72df4f04b8cbe4aadee0ae7325908",
+                "reference": "76942e5e3eb72df4f04b8cbe4aadee0ae7325908",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ducks\\Component\\": "src/Ducks/Component/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adrien Loyant",
+                    "email": "donald_duck@team-df.org",
+                    "homepage": "http://adrien.loyant.net",
+                    "role": "Owner"
+                }
+            ],
+            "description": "Drupal info file parser",
+            "homepage": "https://github.com/ducks-project/drupal-info/",
+            "keywords": [
+                "drupal",
+                "file",
+                "info",
+                "parser"
+            ],
+            "time": "2016-10-31 17:21:01"
+        },
+        {
+            "name": "ducks-project/spl-types",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ducks-project/spl-types.git",
+                "reference": "aa251d191ccdde1d8f74eeeb896bda67b2e9c178"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ducks-project/spl-types/zipball/aa251d191ccdde1d8f74eeeb896bda67b2e9c178",
+                "reference": "aa251d191ccdde1d8f74eeeb896bda67b2e9c178",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ducks\\Component\\": "src/Ducks/Component/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adrien Loyant",
+                    "email": "donald_duck@team-df.org",
+                    "homepage": "http://adrien.loyant.net",
+                    "role": "Owner"
+                }
+            ],
+            "description": "This extension aims at helping people making PHP a stronger typed language and can be a good alternative to scalar type hinting. It provides different typehandling classes as such as integer, float, bool, enum and string",
+            "homepage": "https://github.com/ducks-project/spl-types/",
+            "keywords": [
+                "SplBool",
+                "SplFloat",
+                "SplInt",
+                "SplString",
+                "SplType",
+                "SplTypes",
+                "enum",
+                "enumerator",
+                "poo",
+                "splenum"
+            ],
+            "time": "2015-11-25 16:51:13"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -4805,6 +5182,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "composer/drupal-installer": 20,
         "drupal/config_devel": 5,
         "drupal/default_content": 15,
         "drupal/devel": 15,
