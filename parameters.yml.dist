@@ -9,11 +9,12 @@ drupal:
     theme:
         name: *drupal.site.name
         base-theme:
-            name: "drupal-theme/acreat_abyssin"
+            short-name: acreat_abyssin
+            name: !join ["drupal-theme/", *drupal.theme.base-theme.short-name ]
             version: "8.x-1.x-dev as 8.x-dev"
         variables:
             $primary-color: blue
-    sync-directories: !join ["../sync/", *drupal.site.domain, "/"]
+    sync-directories: !join ["conf/contrib", *drupal.site.domain, "/"]
     database:
         driver: pdo_mysql
         database: database
@@ -171,7 +172,7 @@ drush:
         - site-install:
             profile: site_installer
             args:
-                "config_installer_sync_configure_form.sync-directories": *drupal.sync-directories
+                "config_installer_sync_configure_form.sync_directory": *drupal.sync-directories
             options:
                 db:
                     driver: *drupal.database.driver

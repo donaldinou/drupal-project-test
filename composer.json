@@ -25,7 +25,7 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-            "type": "vcs",
+            "type": "composer",
             "url":  "http://gitlab.acreat"
         }
 
