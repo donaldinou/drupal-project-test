@@ -26,27 +26,7 @@
         },
         {
             "type": "vcs",
-            "url":  "http://gitlab.acreat/composer/drupal-installer.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "http://gitlab.acreat/acreat/drupal-acreat-adminimal-admin-toolbar.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "http://gitlab.acreat/acreat/drupal-acreat-factory.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "http://gitlab.acreat/acreat/drupal-acreat-helper.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "http://gitlab.acreat/acreat/drupal-acreat-news.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "http://gitlab.acreat/acreat/drupal-theme-abyssin.git"
+            "url":  "http://gitlab.acreat"
         }
 
     ],
@@ -102,7 +82,8 @@
             "libraries/contrib/{$name}/": ["type:drupal-library"],
             "modules/contrib/{$name}/": ["type:drupal-module"],
             "profiles/contrib/{$name}/": ["type:drupal-profile"],
-            "themes/contrib/{$name}/": ["type:drupal-theme"]
+            "themes/contrib/{$name}/": ["type:drupal-theme"],
+            "config/contrib/{$name}": ["type:drupal-config"]
         }
     }
 }

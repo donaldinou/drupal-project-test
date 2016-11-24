@@ -201,28 +201,23 @@ drush:
             list: ["comment", "color", "help", "rdf", "search", "tour", "dashboard", "help", "overlay"]
         - pm-enable:
             list: [ *drupal.theme.name, "acreat_helper" ]
-        - variable-set:
-            name: theme_default
+        - config-set:
+            config-name: system.theme
+            key: default
             value: *drupal.theme.name
-        - variable-set: # config-set
-            name: admin_theme # system.theme default|admin
+        - config-set:
+            config-name: system.theme
+            key: admin
             value: seven
-        - variable-set:
-            name: system.file.temporary
+        - config-set:
+            name: system.file
+            key: temporary
             value: /tmp
-            args: ~
-            options: ~
-        - variable-set:
-            name: file_temporary_path
-            value: /tmp
-            args: ~
-            options: ~
-        - variable-set:
-            name: google_analytics.settings.account
+        - config-set:
+            name: google_analytics.settings
+            key: account
             value: *drupal.site.google_analytics_account
-            args: ~
-            options: ~
-        - variable-set:
+        - config-set:
             name: acreat_factory.client
             value: *drupal.form.contact
             args: ~
