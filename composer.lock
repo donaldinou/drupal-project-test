@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "25ec26c724189c94ae144f0b20078e32",
-    "content-hash": "d6f5f755a040d1d2ac917eadb4140304",
+    "hash": "78db038b2aee4f6f7aaa1e3014e5ca78",
+    "content-hash": "36e34309d144013a39eec7e415415694",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -95,7 +95,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "http://gitlab.acreat/composer/drupal-installer.git",
+                "url": "git@gitlab.acreat:composer/drupal-installer.git",
                 "reference": "aca1d5099e48f3004c8845ed1a3871aad95df8a5"
             },
             "require": {
@@ -149,7 +149,7 @@
             "support": {
                 "email": "support@acreat.com"
             },
-            "time": "2016-11-17 15:16:57"
+            "time": "2016-11-17 17:34:06"
         },
         {
             "name": "composer/installers",
@@ -795,7 +795,7 @@
             "support": {
                 "email": "support@drupal.org"
             },
-            "time": "2016-11-17 09:49:01"
+            "time": "2016-11-17 17:45:24"
         },
         {
             "name": "drupal-features/acreat_factory",
@@ -875,14 +875,14 @@
             "support": {
                 "email": "support@drupal.org"
             },
-            "time": "2016-11-17 14:38:54"
+            "time": "2016-11-17 17:46:06"
         },
         {
             "name": "drupal-features/acreat_helper",
             "version": "8.1.1",
             "source": {
                 "type": "git",
-                "url": "http://gitlab.acreat/acreat/drupal-acreat-helper.git",
+                "url": "git@gitlab.acreat:acreat/drupal-acreat-helper.git",
                 "reference": "f3c0bb2479c9f422c517c033c7678f34b3995f08"
             },
             "require": {
@@ -1029,7 +1029,317 @@
             "support": {
                 "email": "support@drupal.org"
             },
-            "time": "2016-11-17 09:56:00"
+            "time": "2016-11-17 17:45:44"
+        },
+        {
+            "name": "drupal-module/acreat_adminimal_admin_toolbar",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.acreat:acreat/drupal-acreat-adminimal-admin-toolbar.git",
+                "reference": "55fd2399fe398b29d94a06cccb66ac26e32774f8"
+            },
+            "require": {
+                "drupal/adminimal_admin_toolbar": "~1.3",
+                "php": ">=5.5.9"
+            },
+            "conflict": {
+                "drupal/drupal": "<8.0 >9.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-1.x"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\acreat_adminimal_admin_toolbar\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "/src/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Régis Hautière",
+                    "email": "hautiere@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Owner"
+                },
+                {
+                    "name": "Pierre Brunet",
+                    "email": "brunet@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Adrien Chretien",
+                    "email": "chretien@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Franck Lintaff",
+                    "email": "lintanff@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Adrien Loyant",
+                    "email": "loyant@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                }
+            ],
+            "description": "Override adminimal_admin_toolbar",
+            "homepage": "http://www.acreat.com",
+            "keywords": [
+                "Drupal",
+                "acreat",
+                "adminimal",
+                "module",
+                "toolbar"
+            ],
+            "support": {
+                "email": "support@drupal.org"
+            },
+            "time": "2016-11-25 14:32:49"
+        },
+        {
+            "name": "drupal-module/acreat_factory",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.acreat:acreat/drupal-acreat-factory.git",
+                "reference": "89c40b4fa1b19774921c6f13258472b66ff6e9a6"
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "conflict": {
+                "drupal/drupal": "<8.0 >9.0"
+            },
+            "replace": {
+                "drupal-module/acreat_factory_content": "self.version"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-1.x"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\acreat_factory\\": "src",
+                    "Drupal\\acreat_factory_content\\": "modules/acreat_factory_content/src"
+                },
+                "exclude-from-classmap": [
+                    "/src/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Régis Hautière",
+                    "email": "hautiere@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Owner"
+                },
+                {
+                    "name": "Pierre Brunet",
+                    "email": "brunet@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Adrien Chretien",
+                    "email": "chretien@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Franck Lintaff",
+                    "email": "lintanff@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Adrien Loyant",
+                    "email": "loyant@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                }
+            ],
+            "description": "This module aim is to provide websites factory some specific functionalities.",
+            "homepage": "http://www.acreat.com",
+            "keywords": [
+                "Drupal",
+                "acreat",
+                "factory",
+                "module"
+            ],
+            "support": {
+                "email": "support@drupal.org"
+            },
+            "time": "2016-11-25 14:32:27"
+        },
+        {
+            "name": "drupal-module/acreat_helper",
+            "version": "v8.1.2",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.acreat:acreat/drupal-acreat-helper.git",
+                "reference": "c8f39c417eb1c99d6854ab56f482ba6b2ccaa8c3"
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/filesystem": "~2.8"
+            },
+            "conflict": {
+                "drupal/drupal": "<8.0 >9.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-1.x"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\acreat_helper\\Component\\Helper\\": "src/Component/Helper"
+                },
+                "exclude-from-classmap": [
+                    "/src/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Régis Hautière",
+                    "email": "hautiere@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Owner"
+                },
+                {
+                    "name": "Pierre Brunet",
+                    "email": "brunet@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Adrien Chretien",
+                    "email": "chretien@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Franck Lintaff",
+                    "email": "lintanff@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Adrien Loyant",
+                    "email": "loyant@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                }
+            ],
+            "description": "Drupal Theme Alpha Test installer",
+            "homepage": "http://www.acreat.com",
+            "keywords": [
+                "Drupal",
+                "acreat",
+                "helper",
+                "module"
+            ],
+            "support": {
+                "email": "support@drupal.org"
+            }
+        },
+        {
+            "name": "drupal-module/acreat_news",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.acreat:acreat/drupal-acreat-news.git",
+                "reference": "970d61269d758a9ee126a2a341ca3f8d0ee99cbc"
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "conflict": {
+                "drupal/drupal": "<8.0 >9.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-1.x"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\acreat_news\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "/src/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Régis Hautière",
+                    "email": "hautiere@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Owner"
+                },
+                {
+                    "name": "Pierre Brunet",
+                    "email": "brunet@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Adrien Chretien",
+                    "email": "chretien@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Franck Lintaff",
+                    "email": "lintanff@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                },
+                {
+                    "name": "Adrien Loyant",
+                    "email": "loyant@acreat.com",
+                    "homepage": "http://www.acreat.com",
+                    "role": "Developper"
+                }
+            ],
+            "description": "Drupal News Acreat Module",
+            "homepage": "http://www.acreat.com",
+            "keywords": [
+                "Drupal",
+                "acreat",
+                "module",
+                "news"
+            ],
+            "support": {
+                "email": "support@drupal.org"
+            },
+            "time": "2016-11-25 14:33:20"
         },
         {
             "name": "drupal/admin_toolbar",
@@ -1134,6 +1444,52 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/adminimal_admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/adminimal_admin_toolbar"
+            }
+        },
+        {
+            "name": "drupal/adminimal_theme",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/adminimal_theme",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/adminimal_theme-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "1c02ff5bd754b868ec2a5865d788a9e969bde79b"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1476865881"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "ANDiTKO",
+                    "homepage": "https://www.drupal.org/user/1428124"
+                },
+                {
+                    "name": "realityloop",
+                    "homepage": "https://www.drupal.org/user/139189"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/adminimal_theme",
+            "support": {
+                "source": "http://cgit.drupalcode.org/adminimal_theme"
             }
         },
         {
@@ -2870,7 +3226,7 @@
                 "info",
                 "parser"
             ],
-            "time": "2016-10-31 17:21:01"
+            "time": "2016-11-17 17:31:19"
         },
         {
             "name": "ducks-project/spl-types",
@@ -5081,26 +5437,25 @@
             "alias": "8.x-dev",
             "alias_normalized": "8.9999999.9999999.9999999-dev",
             "version": "dev-8.x-1.x",
-            "package": "drupal-features/acreat_adminimal_admin_toolbar"
+            "package": "drupal-module/acreat_adminimal_admin_toolbar"
         },
         {
             "alias": "8.x-dev",
             "alias_normalized": "8.9999999.9999999.9999999-dev",
             "version": "dev-8.x-1.x",
-            "package": "drupal-features/acreat_factory"
+            "package": "drupal-module/acreat_factory"
         },
         {
             "alias": "8.x-dev",
             "alias_normalized": "8.9999999.9999999.9999999-dev",
             "version": "dev-8.x-1.x",
-            "package": "drupal-features/acreat_news"
+            "package": "drupal-module/acreat_news"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
         "composer/drupal-installer": 20,
         "drupal/config_devel": 5,
-        "drupal/default_content": 15,
         "drupal/devel": 15,
         "drupal/entity": 15,
         "drupal/inline_entity_form": 10,
@@ -5111,9 +5466,9 @@
         "drupal/pathauto": 10,
         "drupal/search_api": 10,
         "drupal/yamlform": 10,
-        "drupal-features/acreat_adminimal_admin_toolbar": 20,
-        "drupal-features/acreat_factory": 20,
-        "drupal-features/acreat_news": 20
+        "drupal-module/acreat_adminimal_admin_toolbar": 20,
+        "drupal-module/acreat_factory": 20,
+        "drupal-module/acreat_news": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
