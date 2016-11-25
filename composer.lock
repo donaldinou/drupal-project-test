@@ -802,7 +802,7 @@
             "source": {
                 "type": "git",
                 "url": "git@gitlab.acreat:acreat/drupal-acreat-factory.git",
-                "reference": "89c40b4fa1b19774921c6f13258472b66ff6e9a6"
+                "reference": "158259a054dfcd7feacdf7e7d39303808f01d1d7"
             },
             "require": {
                 "php": ">=5.5.9"
@@ -874,7 +874,7 @@
             "support": {
                 "email": "support@drupal.org"
             },
-            "time": "2016-11-25 14:32:27"
+            "time": "2016-11-25 16:09:56"
         },
         {
             "name": "drupal-module/acreat_helper",
@@ -958,7 +958,7 @@
             "source": {
                 "type": "git",
                 "url": "git@gitlab.acreat:acreat/drupal-acreat-news.git",
-                "reference": "970d61269d758a9ee126a2a341ca3f8d0ee99cbc"
+                "reference": "932161ce75b024fe17e0f3cf624927708bd9f212"
             },
             "require": {
                 "php": ">=5.5.9"
@@ -1026,7 +1026,7 @@
             "support": {
                 "email": "support@drupal.org"
             },
-            "time": "2016-11-25 14:33:20"
+            "time": "2016-11-25 16:08:48"
         },
         {
             "name": "drupal/admin_toolbar",
