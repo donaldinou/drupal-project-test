@@ -59,7 +59,11 @@
         "drupal-module/acreat_news": "8.x-1.x-dev as 8.x-dev"
     },
     "conflict": {
-        "drupal/drupal": "<8.1 >9.0"
+        "drupal/drupal": "<8.1 >9.0",
+        "drupal-features/acreat_adminimal_admin_toolbar": "*",
+        "drupal-features/acreat_factory": "*",
+        "drupal-features/acreat_helper": "*",
+        "drupal-features/acreat_news": "*"
     },
     "support": {
         "email": "support@acreat.com"
