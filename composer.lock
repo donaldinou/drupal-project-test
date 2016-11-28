@@ -871,7 +871,7 @@
             "source": {
                 "type": "git",
                 "url": "git@gitlab.acreat:acreat/drupal-acreat-factory.git",
-                "reference": "158259a054dfcd7feacdf7e7d39303808f01d1d7"
+                "reference": "94bd4004481041c0bfd709a57580d0f1c9d171f9"
             },
             "require": {
                 "php": ">=5.5.9"
