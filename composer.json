@@ -56,7 +56,8 @@
         "drupal-module/acreat_adminimal_admin_toolbar": "8.x-1.x-dev as 8.x-dev",
         "drupal-module/acreat_factory": "8.x-1.x-dev as 8.x-dev",
         "drupal-module/acreat_helper": "^8.1",
-        "drupal-module/acreat_news": "8.x-1.x-dev as 8.x-dev"
+        "drupal-module/acreat_news": "8.x-1.x-dev as 8.x-dev",
+        "drupal-config/default_content": "8.x-1.x-dev as 8.x-dev"
     },
     "conflict": {
         "drupal/drupal": "<8.1 >9.0",
