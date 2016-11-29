@@ -1,8 +1,9 @@
 drupal:
     core: 8.x
+    profile: standard
     root: /var/www/html/drupal/drupal8
     site:
-        domain: mmywebsite.com
+        domain: mywebsite.com
         name: My Website
         mail: admin@example.com
         google_analytics_account: UA-XXXXXX
@@ -11,7 +12,7 @@ drupal:
         base-theme:
             short-name: acreat_abyssin
             name: !join ["drupal-theme/", *drupal.theme.base-theme.short-name ]
-            version: "8.x-1.x-dev as 8.x-dev"
+            version: "8.1.0"
         variables:
             $primary-color: blue
     sync-directories: !join ["conf/contrib", *drupal.site.domain, "/"]
@@ -24,7 +25,9 @@ drupal:
         port: 3306
         prefix: ~
         charset: utf8mb4
-        collation: utf8mb4_general_ci
+        default_table_options:
+            charset: *drupal.database.charset
+            collate: utf8mb4_general_ci
     contact:
         name: My Contact Name
         email: *drupal.site.mail
@@ -50,7 +53,7 @@ drupal:
             composer: ~
             sass:
                 style:
-                    import: !join [ "styles/scss/",  "style.scss" ]
+                    import: !join [ *drupal.theme.base-theme, "/styles/scss/",  "style.scss" ]
                     import: "_variables"
                     "@mixin sample":
                         font-size: $primary-color
@@ -170,7 +173,7 @@ drupal:
 drush:
     commands:
         - site-install:
-            profile: site_installer
+            profile: *drupal.profile
             args:
                 "config_installer_sync_configure_form.sync_directory": *drupal.sync-directories
             options:
@@ -183,7 +186,7 @@ drush:
                     port: *drupal.database.port
                     prefix: *drupal.database.prefix
                     charset: *drupal.database.charset
-                    collation: *drupal.database.collation
+                    collation: *drupal.database.default_table_options.collate
                 account-name: admin
                 account-pass: admin
                 account-mail: admin@example.com
@@ -192,8 +195,6 @@ drush:
                 site-name: *drupal.site.mail
                 site-mail: *drupal.site.mail
                 sites-subdir: *drupal.site.domain
-        - pm-disable:
-            list: ["quickedit", "contact", "contextual", "comment", "color", "help", "rdf", "search", "tour", "dashboard", "help", "overlay"]
         - pm-uninstall:
             list: quickedit
         - pm-uninstall:
@@ -226,13 +227,12 @@ drush:
                 format: auto
         - "import:content":
             args: ~
-            options: ~
+            options:
+                path: !join [ *drupal.root, "/sites/", *drupal.site.domain, "/config/contrib/default_content" ]
             custom: [ "install", "update" ]
         - updatedb:
             args: ~
             options: ~
-        - cache-clear:
-            type: all
         - cache-rebuild:
             args: ~
             options: ~

@@ -30,8 +30,10 @@ update.php
 xmlrpc.php
 /includes
 /misc
+/core
 /modules
 /profiles
+/config
 /scripts
 /themes
 /vendor

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2f19c0d7b19243e0f95e960e003713b0",
-    "content-hash": "c8c5de0c2a3ed1745e65f91e2ae10395",
+    "hash": "3239698c6d86a33ebecf527adaf40edb",
+    "content-hash": "e2d70fd10734c983e5809541e6dcdf21",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -89,66 +89,6 @@
                 "transliterator"
             ],
             "time": "2015-09-28 16:26:35"
-        },
-        {
-            "name": "composer/drupal-installer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@gitlab.acreat:composer/drupal-installer.git",
-                "reference": "66c54b636bc5c3c8c07e12a7583604ac0b94bde6"
-            },
-            "require": {
-                "behat/transliterator": "~1.1",
-                "composer-plugin-api": "~1.0",
-                "ducks-project/drupal-info": "dev-master",
-                "ducks-project/spl-types": "~1.0",
-                "php": ">=5.4",
-                "symfony/yaml": "~2.8"
-            },
-            "conflict": {
-                "drupal/drupal": "6.*"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Composer\\Drupal\\Plugin\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Drupal\\": "src/Composer/Drupal/",
-                    "Composer\\Drush\\": "src/Composer/Drush/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Régis Hautière",
-                    "email": "hautiere@acreat.com",
-                    "homepage": "http://www.acreat.com",
-                    "role": "Owner"
-                },
-                {
-                    "name": "Adrien Loyant",
-                    "email": "loyant@acreat.com",
-                    "homepage": "http://www.acreat.com",
-                    "role": "Developper"
-                }
-            ],
-            "description": "Composer plugin in order to add extra features when installing a drupal website",
-            "homepage": "http://www.acreat.com",
-            "keywords": [
-                "Drupal",
-                "acreat",
-                "composer",
-                "plugin",
-                "tools"
-            ],
-            "support": {
-                "email": "support@acreat.com"
-            },
-            "time": "2016-11-17 17:34:06"
         },
         {
             "name": "composer/semver",
@@ -5108,7 +5048,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "composer/drupal-installer": 20,
         "drupal/config_devel": 5,
         "drupal/devel": 15,
         "drupal/entity": 15,
