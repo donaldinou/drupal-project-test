@@ -212,15 +212,15 @@ drush:
             key: admin
             value: seven
         - config-set:
-            name: system.file
+            config-name: system.file
             key: temporary
             value: /tmp
         - config-set:
-            name: google_analytics.settings
+            config-name: google_analytics.settings
             key: account
             value: *drupal.site.google_analytics_account
         - config-set:
-            name: acreat_factory.client
+            config-name: acreat_factory.client
             value: *drupal.form.contact
             args: ~
             options:
