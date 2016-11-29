@@ -229,7 +229,7 @@ drush:
         - "import:content":
             args: ~
             options:
-                path: !join [ *drupal.root, "/sites/", *drupal.site.domain, "/config/contrib/default_content" ]
+                content-path: !join [ *drupal.root, "/sites/", *drupal.site.domain, "/config/contrib/default_content" ]
             custom: [ "install", "update" ]
         - updatedb:
             args: ~
@@ -237,8 +237,3 @@ drush:
         - cache-rebuild:
             args: ~
             options: ~
-        - registry-rebuild:
-            args: ~
-            options:
-                fire-bazooka: true
-            custom: [ "install", "update" ]
