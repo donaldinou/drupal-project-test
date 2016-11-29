@@ -220,7 +220,7 @@ drush:
             key: account
             value: *drupal.site.google_analytics_account
         - config-set:
-            config-name: acreat_factory
+            config-name: acreat_factory.client
             key: client
             value: *drupal.form.contact
             args: ~
