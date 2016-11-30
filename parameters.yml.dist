@@ -12,7 +12,7 @@ drupal:
         base-theme:
             short-name: acreat_abyssin
             name: !join ["drupal-theme/", *drupal.theme.base-theme.short-name ]
-            version: "8.1.0"
+            version: "^8.1.0"
         variables:
             $primary-color: blue
     sync-directories: !join ["conf/contrib", *drupal.site.domain, "/"]
@@ -46,6 +46,7 @@ drupal:
     commands:
         - "drupal:generate:theme":
             name: *drupal.theme.name
+            description: !join [ "Drupal Theme [", *drupal.theme.name, "] - Based on ", *drupal.theme.base-theme.short-name]
             core: *drupal.core
             base-theme: *drupal.theme.base-theme.name
             root: *drupal.root
@@ -53,26 +54,12 @@ drupal:
             composer: ~
             sass:
                 style:
-                    import: !join [ *drupal.theme.base-theme, "/styles/scss/",  "style.scss" ]
-                    import: "_variables"
-                    "@mixin sample":
-                        font-size: $primary-color
-                    $screen-sm-max: 920
-                    .test:
-                        padding: auto
-                    .class:
-                        padding-top: 5px
-                        .inherit-class:
-                            margin-top: 10px
-                            "& > div::before":
-                                content: " "
-                                padding: "0px"
-                                margin: "0px"
-                                "@include sample": ~
-                                background: "#fff"
-                                "@media (max-width: $screen-sm-max)":
-                                    .class:
-                                        background: "red"
+                    import: 
+                        - !join [ *drupal.theme.base-theme, "/styles/scss/",  "style.scss" ]
+                        - "_variables"
+                    .very-important:
+                        font-size: large;
+                        font-weight: bold;
                 _variables: *drupal.theme.variables
             bower: ~
             npm: ~
